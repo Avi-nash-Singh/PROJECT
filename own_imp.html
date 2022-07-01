@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Own Implementation</title>
+</head>
+<style>
+    body{
+        font-family: sans-serif;
+    }
+    table, th, td{
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+    table{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .btn{
+        display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    }
+    .text{
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
+<body>
+    <div class="text">
+        <h1>Editable Table Exporter</h1>
+    </div>
+
+    <div class="table">
+        <table id="dataTable" class="table" >
+            <thead>
+                <tr>
+                    <th>Person_location</th>
+                    <th>Match_count</th>
+                    <th>Time_taken(s)</th>
+                    <th>Miles_travelled</th>
+                    <th>Fuel_used</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Input R1</td>
+                    <td>Input R1</td>
+                    <td>Input R1</td>
+                    <td>Input R1</td>
+                    <td>Input R1</td>
+                </tr>
+                <tr>
+                    <td>Input R2</td>
+                    <td>Input R2</td>
+                    <td>Input R2</td>
+                    <td>Input R2</td>
+                    <td>Input R2</td>
+                </tr>
+                <tr>
+                    <td>Input R3</td>
+                    <td>Input R3</td>
+                    <td>Input R3</td>
+                    <td>Input R3</td>
+                    <td>Input R3</td>
+                </tr>
+                <tr>
+                    <td>Input R4</td>
+                    <td>Input R4</td>
+                    <td>Input R4</td>
+                    <td>Input R4</td>
+                    <td>Input R4</td>
+                </tr>
+                <tr>
+                    <td>Input R5</td>
+                    <td>Input R5</td>
+                    <td>Input R5</td>
+                    <td>Input R5</td>
+                    <td>Input R5</td>
+                </tr>
+                <tr>
+                    <td>Input R6</td>
+                    <td>Input R6</td>
+                    <td>Input R6</td>
+                    <td>Input R6</td>
+                    <td>Input R6</td>
+                </tr>
+                <tr>
+                    <td>Input R7</td>
+                    <td>Input R7</td>
+                    <td>Input R7</td>
+                    <td>Input R7</td>
+                    <td>Input R7</td>
+                </tr>
+                <tr>
+                    <td>Input R8</td>
+                    <td>Input R8</td>
+                    <td>Input R8</td>
+                    <td>Input R8</td>
+                    <td>Input R8</td>
+                </tr>
+                <tr>
+                    <td>Input R9</td>
+                    <td>Input R9</td>
+                    <td>Input R9</td>
+                    <td>Input R9</td>
+                    <td>Input R9</td>
+                </tr>
+                <tr id="lastRow">
+                    <td>Input R10</td>
+                    <td>Input R10</td>
+                    <td>Input R10</td>
+                    <td>Input R10</td>
+                    <td>Input R10</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="btn">
+        <button onclick="exportTableToCSV('members.csv')"> Export </button>
+        <!-- <button onclick="addRow()">Add row</button> -->
+        </div>
+    </div>
+
+</body>
+<script src="js.js"></script>
+
+</html>
