@@ -3,25 +3,18 @@ console.log("working")
 function downloadCSV(csv, filename) {
     let csvFile;
     let downloadLink;
-
     // CSV file
     csvFile = new Blob([csv], {type: "text/csv"});
-
     // Download link
     downloadLink = document.createElement("a");
-
     // File name
     downloadLink.download = filename;
-
     // Create a link to the file
     downloadLink.href = window.URL.createObjectURL(csvFile);
-
     // Hide download link
     downloadLink.style.display = "none";
-
     // Add the link to DOM
     document.body.appendChild(downloadLink);
-
     // Click download link
     downloadLink.click();
 }
@@ -29,7 +22,6 @@ function downloadCSV(csv, filename) {
 function exportTableToCSV(filename) {
     let csv = [];
     let rows = document.querySelectorAll("table tr");
-    
     for (var i = 0; i < rows.length; i++) {
         let row = [], cols = rows[i].querySelectorAll("td, th");
         
@@ -38,14 +30,12 @@ function exportTableToCSV(filename) {
         
         csv.push(row.join(","));        
     }
-
     // Download CSV file
     downloadCSV(csv.join("\n"), filename);
 }
 
 let table=document.getElementById("dataTable");
 let cells=table.getElementsByTagName("td");
-
 for(let i=0; i<cells.length; i++){
     cells[i].onclick=function() {
 
@@ -85,13 +75,11 @@ for(let i=0; i<cells.length; i++){
                 console.log("No changes");
             }
         }
-
         this.innerHTML="";
         this.style.cssText="padding: 0px 0px";
         this.append(input);
         this.firstElementChild.select();
     }
 }
-
 // function addRow(){
 // }
